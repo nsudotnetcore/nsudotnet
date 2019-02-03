@@ -1,0 +1,4 @@
+.course-navigation-links{
+  display: flex;
+  flex-wrap: wrap;
+}

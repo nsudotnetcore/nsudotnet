@@ -1,0 +1,24 @@
+<div class="course-page">
+  <h1>Задачи</h1>
+  <p>Всем участникам курса предлагаются к выполнению практические задания. Их список вы видите на этой странице.</p>
+  <h2>Система оценок</h2>
+  <p>Задания можно выбирать любые и делать их в любом порядке.</p>
+  <p>- На «удовлетворительно» - достаточно 8 баллов</p>
+  <p>- На «хорошо» - достаточно 12 баллов</p>
+  <p>- На «отлично» - достаточно 15 баллов</p>
+  <h2>Что нужно?</h2>
+  <p>Для выполнения заданий вам понадобится:</p>
+  <p><a href="https://visualstudio.microsoft.com/ru/free-developer-offers/">Visual Studio 2017 (Community)</a>
+    или <a href="https://code.visualstudio.com/">Visual Studio Code</a></p>
+  <p><a href="https://www.microsoft.com/ru-ru/sql-server/sql-server-editions-express">MS SQL Server Express</a></p>
+  <p>При выполнении задач приоритет лучше отдавать <a href="https://dotnet.microsoft.com/download">.NET Core</a>.
+    Для последних задач он - обязательное условие.</p>
+  <h2>Список заданий</h2>
+  <div class="tasks-table">
+  <div class="tasks-table-item"><h3>Задание</h3><h3>Баллы</h3></div>
+  <div *ngFor="let task of tasks; index as i" class="tasks-table-item">
+    <a [routerLink]="'/task/'+i" routerLinkActive="active">{{task.name}}</a>
+    <span>до {{task.score}}</span>
+  </div>
+  </div>
+</div>

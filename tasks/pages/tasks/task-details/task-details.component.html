@@ -1,0 +1,16 @@
+<div class="course-page">
+  <h1>Задача №{{taskNumber}} {{(curTask$ | async).name}}</h1>
+  <h2>Баллы</h2>
+  <p>{{(curTask$ | async).score}}</p>
+  <h2>Описание</h2>
+  <p *ngFor="let textBlock of (curTask$ | async).description.textBlocks" class="task-description-page__text-block">
+    {{textBlock}}
+  </p>
+  <h2 *ngIf="(curTask$ | async).materials.links.length > 0">Материалы</h2>
+  <p>
+    <span *ngFor="let materialLink of (curTask$ | async).materials.links; index as i">
+      <a [href]="materialLink.url">{{materialLink.name}}</a>
+      <span *ngIf="i < (curTask$ | async).materials.links.length -1">, </span>
+    </span>
+  </p>
+</div>
