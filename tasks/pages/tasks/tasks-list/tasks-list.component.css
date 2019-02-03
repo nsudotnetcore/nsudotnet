@@ -1,8 +1,0 @@
-.tasks-table-item{
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 20px;
-}
-.tasks-table{
-  max-width: 300px;
-}
